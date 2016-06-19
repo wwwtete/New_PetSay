@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/petsay_titlebar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.petsay.component.view.swipelistview.SwipeListView
+            android:id="@+id/swipelistviwe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:swipeActionLeft="reveal"
+            app:swipeBackView="@+id/swipe_backview"
+            app:swipeCloseAllItemsWhenMoveList="true"
+            app:swipeFrontView="@+id/swipe_frontview"
+            app:swipeMode="left"
+            app:swipeOpenOnLongPress="false" >
+        </com.petsay.component.view.swipelistview.SwipeListView>
+
+        <TextView
+            android:id="@+id/tv_nomsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="木有私信"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

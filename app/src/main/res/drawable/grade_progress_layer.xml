@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <!--两边角度，数字越大弧度越大-->
+            <corners android:radius="25.0dip" />
+            <gradient android:startColor="@color/white" android:endColor="@color/white"
+                      android:angle="270.0" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <!--两边角度-->
+                <corners android:radius="25.0dip" />
+                <!--笔触颜色及厚度-->
+                <stroke android:width="1dp"
+                        android:color="@color/white"/>
+                <gradient android:startColor="#8782FA" android:endColor="#8782FA"
+                          android:centerColor="#8782FA" android:angle="270.0" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

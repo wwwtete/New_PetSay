@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/fl_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.petsay.activity.personalcustom.diary.diaryview.DiaryViewModule
+            android:id="@+id/left_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <View
+            android:id="@+id/left_shadown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/zuoyinying"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.petsay.activity.personalcustom.diary.diaryview.DiaryViewModule
+            android:id="@+id/right_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <View
+            android:id="@+id/right_shadown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/youyinying"/>
+    </FrameLayout>
+
+</LinearLayout>

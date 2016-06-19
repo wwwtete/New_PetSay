@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/transparency_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_wifiauto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:padding="@dimen/setting_item_padding" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="仅在WIFI下播放"
+                android:textColor="@color/black"
+                android:textSize="@dimen/setting_item_textsize" />
+
+            <ImageView
+                android:id="@+id/iv_wifiauto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layout_auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:padding="@dimen/setting_item_padding" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="始终自动播放"
+                android:textColor="@color/black"
+                android:textSize="@dimen/setting_item_textsize" />
+
+            <ImageView
+                android:id="@+id/iv_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layout_noauto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:padding="@dimen/setting_item_padding" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="禁止自动播放"
+                android:textColor="@color/black"
+                android:textSize="@dimen/setting_item_textsize" />
+
+            <ImageView
+                android:id="@+id/iv_noauto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        
+        
+        
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

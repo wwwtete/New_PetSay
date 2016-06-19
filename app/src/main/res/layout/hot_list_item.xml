@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/usercenter_list_item_tab" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent_white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlayout_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <com.petsay.component.view.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_header"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/placeholderhead"
+                app:border_color="#ffffff"
+                app:border_width="2dp" />
+
+            <ImageView
+                android:id="@+id/img_star"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/img_header"
+                android:layout_alignRight="@+id/img_header"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/star"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/img_header"
+                android:orientation="horizontal" >
+
+                <com.petsay.component.animationview.AttentionButtonView
+                    android:id="@+id/btn_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/img_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/male" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/btn_attention"
+                    android:layout_toRightOf="@id/img_sex"
+                    android:ellipsize="end"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/list_name"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/img_header" >
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/list_grade"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/list_grade"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/img_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_age"
+                    android:layout_alignTop="@id/tv_age"
+                    android:layout_toRightOf="@id/tv_age" />
+
+                <TextView
+                    android:id="@+id/tv_grade"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_date"
+                    android:layout_toRightOf="@id/img_grade"
+                    android:textColor="@color/list_grade"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/layout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <!-- <RelativeLayout -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" > -->
+
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/img_pet" -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:adjustViewBounds="true" -->
+                <!-- android:background="#CCCCCC" -->
+                <!-- android:scaleType="fitCenter" /> -->
+
+
+                <!-- <com.petsay.component.view.ExProgressBar -->
+                <!-- android:id="@+id/pro_loaderpro" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_centerHorizontal="true" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:visibility="gone" /> -->
+
+
+                <!-- <com.petsay.component.view.functionbar.StepAnimView -->
+                <!-- android:id="@+id/stepanim" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_alignParentBottom="true" -->
+                <!-- android:layout_alignParentRight="true" -->
+                <!-- android:layout_marginBottom="20dp" -->
+                <!-- android:layout_marginRight="20dp" -->
+                <!-- android:background="@drawable/step_anim" -->
+                <!-- android:visibility="gone" /> -->
+                <!-- <ImageView -->
+                <!-- android:id="@+id/img_play" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_alignParentBottom="true" -->
+                <!-- android:layout_alignParentRight="true" -->
+                <!-- android:padding="@dimen/petalk_playbtn_padding" -->
+                <!-- android:src="@drawable/play_icon" /> -->
+                <!-- </RelativeLayout> -->
+
+                <include layout="@layout/petalk_public_content_view" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/list_content"
+                        android:textSize="18sp" />
+
+                    <!-- <LinearLayout -->
+                    <!-- android:id="@+id/layout_tag" -->
+                    <!-- android:layout_width="fill_parent" -->
+                    <!-- android:layout_height="wrap_content" -->
+                    <!-- android:layout_marginTop="10dp" -->
+                    <!-- android:orientation="vertical" > -->
+                    <!-- </LinearLayout> -->
+
+                    <com.petsay.component.view.TagView
+                        android:id="@+id/tagview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.petsay.component.view.functionbar.FunctionBarView
+                android:id="@+id/functionbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_root" />
+
+            <com.petsay.component.view.petalklistitem.ListItemStepLayout
+                android:id="@+id/steplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/functionbar" />
+
+            <com.petsay.component.view.petalklistitem.ListItemCommentLayout
+                android:id="@+id/commentlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/steplayout" />
+
+            <LinearLayout
+                android:id="@+id/layout_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="9" >
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <com.petsay.component.gifview.AudioGifView
+                    android:id="@+id/am_gif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="matrix" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

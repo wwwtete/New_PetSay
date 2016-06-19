@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/bg_translucence"
+        android:background="@drawable/search_tag_item_bg"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/ev_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:hint="@string/findpwd_num"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:padding="4dp" >
+
+            <com.petsay.component.view.VerifyCodeButton
+                android:id="@+id/btn_sendcode"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/fasongyanzhengmanormal"
+                android:text="@string/reg_send" />
+
+            <EditText
+                android:id="@+id/edtxt_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_sendcode"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/reg_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btnlogin_selector"
+            android:text="@string/reg_next"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

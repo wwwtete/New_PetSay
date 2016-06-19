@@ -1,0 +1,60 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <FrameLayout
+                android:id="@+id/fragment_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <com.petsay.component.view.BottomCameraView
+                android:id="@+id/main_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/bottom_height"
+                android:layout_alignParentBottom="true" />
+
+            <com.petsay.component.view.ReleaseTypeSelectView
+                android:id="@+id/release_sel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" />
+            <com.petsay.component.view.ExHintView
+            android:id="@+id/hint_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/main_bottom"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:src="@drawable/hint_camera"/>
+
+            <com.petsay.component.view.ExHintView
+                android:id="@+id/hint_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/main_bottom"
+                android:visibility="gone"
+                android:src="@drawable/hint_msg"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <include layout="@layout/sliding_view" />
+
+    <LinearLayout
+        android:id="@+id/menu_layout_left"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#ffffff"
+        android:orientation="vertical" />
+
+
+</android.support.v4.widget.DrawerLayout>

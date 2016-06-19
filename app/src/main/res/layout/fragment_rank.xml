@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ListView
+            android:id="@+id/lv_rank"
+            style="@style/list_trasparent2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.petsay.component.view.PullToRefreshView>
+
+</LinearLayout>

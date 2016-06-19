@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_titlebar"
+        android:background="#ECECEC"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_petname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/coin_icon"
+            android:textColor="#646464"
+            android:textSize="16sp" />
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/tv_exchangeHistory" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:ellipsize="end" -->
+        <!-- android:maxWidth="150dp" -->
+        <!-- android:singleLine="true" -->
+        <!-- android:text="兑换记录" -->
+        <!-- android:textColor="#646464" -->
+        <!-- android:textSize="16sp" /> -->
+    </RelativeLayout>
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_info"
+        android:background="#FFFFFF" >
+
+        <ListView
+            android:id="@+id/lv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="#eeeeee"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:scrollingCache="false" />
+    </com.petsay.component.view.PullToRefreshView>
+
+    <TextView
+        android:id="@+id/tv_suspend_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_info"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+</RelativeLayout>

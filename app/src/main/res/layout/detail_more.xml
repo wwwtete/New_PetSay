@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="#ee000000"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_btn_shape"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_del"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_del"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/detail_more_del"
+                android:textColor="#407DA8"
+                android:textSize="@dimen/cancelmenu_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.5dip"
+                android:background="#D0D0D0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_report"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail_more_report"
+            android:textColor="#407DA8"
+            android:textSize="@dimen/cancelmenu_text_size" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circular_btn_shape"
+        android:text="@string/detail_more_cancle"
+        android:textColor="#407DA8"
+        android:textSize="@dimen/cancelmenu_text_size" />
+
+</LinearLayout>

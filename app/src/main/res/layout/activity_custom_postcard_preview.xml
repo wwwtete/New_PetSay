@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/postcard_bg" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <ImageView
+        android:id="@+id/img_postcardborder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_titlebar"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/postcardborder" />
+
+    <RelativeLayout
+        android:id="@+id/layout_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_postcardborder"
+        android:layout_alignLeft="@id/img_postcardborder"
+        android:layout_alignRight="@id/img_postcardborder"
+        android:layout_alignTop="@id/img_postcardborder" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_card"
+        android:layout_margin="30dp"
+        android:max="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/huakuaier" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/seekbar"
+        android:layout_below="@id/seekbar"
+        android:layout_marginTop="-30dp" />
+
+    <ImageView android:id="@+id/img_gocustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/btn_custom_preview" />
+
+</RelativeLayout>

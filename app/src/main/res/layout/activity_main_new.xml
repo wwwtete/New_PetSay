@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activity_bg" >
+
+    <com.petsay.component.view.BottomCameraView
+        android:id="@+id/main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom" >
+
+        <com.petsay.activity.main.PersonalCustomView
+            android:id="@+id/personalcustomview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/layout_petalk"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bar_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <com.petsay.component.view.MarkImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/miv_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:content_src="@drawable/bottom_msg"
+                    app:mark_position="top_right"
+                    app:mark_src="@drawable/msg_reddot"
+                    app:mark_visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/home_title_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_hot"
+                        style="@style/hometitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_title_select"
+                        android:text="@string/home_title_hot"
+                        android:textColor="@color/home_title_selected" />
+
+                    <TextView
+                        android:id="@+id/tv_square"
+                        style="@style/hometitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_title_square" />
+
+                    <TextView
+                        android:id="@+id/tv_focus"
+                        style="@style/hometitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_title_focus" />
+                </LinearLayout>
+
+                <com.petsay.component.view.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/iv_user"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/placeholderhead"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.petsay.component.view.ReleaseTypeSelectView
+        android:id="@+id/release_sel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <com.petsay.component.view.ExHintView
+        android:id="@+id/hint_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hint_camera"
+        android:visibility="gone" />
+
+    <com.petsay.component.view.ExHintView
+        android:id="@+id/hint_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom"
+        android:src="@drawable/hint_msg"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:layout_above="@id/main_bottom"
+        android:src="@drawable/main_sign"
+        android:visibility="gone" />
+
+</RelativeLayout>

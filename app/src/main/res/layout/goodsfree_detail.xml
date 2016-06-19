@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <!-- <com.petsay.component.view.PullToRefreshView -->
+    <!-- android:id="@+id/pulltorefreshview" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_below="@id/ic_titlebar" -->
+    <!-- android:background="#FFFFFF" > -->
+
+    <LinearLayout
+        android:id="@+id/layout_buy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ECECEC"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/tv_applyBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shop_buy"
+            android:text="申请试用"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <com.petsay.component.view.PagerScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layout_buy"
+        android:layout_below="@id/ic_titlebar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ECECEC"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.petsay.component.view.WrapContentHeightViewPager
+                    android:id="@+id/vPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:flipInterval="30"
+                    android:persistentDrawingCache="animation" />
+                <!-- 这个布局是下面显示的小圆点的布局，其中ImageView的数量要与上面RelativeLayout的数量对应 -->
+
+                <LinearLayout
+                    android:id="@+id/llayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/vPager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textColor="#646464"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/coin_icon_gray"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_strike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_coin"
+                    android:layout_alignLeft="@id/tv_coin"
+                    android:layout_alignRight="@id/tv_coin"
+                    android:layout_alignTop="@id/tv_coin" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        android:background="#646464" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_posttype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shop_remark"
+                    android:gravity="center"
+                    android:text="免运费"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:weightSum="5" >
+
+                <TextView
+                    android:id="@+id/tv_allcount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:textColor="#646464"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_joincount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:textColor="#646464"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_remaindays"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2.2"
+                    android:textColor="#646464"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.petsay.component.view.PagerScrollView>
+    <!-- </com.petsay.component.view.PullToRefreshView> -->
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- <me.isming.crop.view.ClipZoomableImageView -->
+    <!-- android:id="@+id/img" -->
+    <!-- android:src="@drawable/test" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent"/> -->
+
+
+    <!-- <me.isming.crop.view.ClipImageBorderView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent"/> -->
+
+    <com.petsay.activity.petalk.capture.view.CropImageLayout
+        android:id="@+id/clip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fanhui_normal" />
+
+        <TextView
+            android:id="@+id/img_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="截图和缩放"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/img_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/queding_normal" />
+    </RelativeLayout>
+
+</RelativeLayout>

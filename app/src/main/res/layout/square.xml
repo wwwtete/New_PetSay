@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.petsay.component.view.PagerScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:paddingTop="5dp" android:paddingBottom="5dp">
+
+                <com.petsay.component.view.WrapContentHeightViewPager
+                    android:id="@+id/vPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:flipInterval="30" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+                    android:persistentDrawingCache="animation" />
+                <!-- 这个布局是下面显示的小圆点的布局，其中ImageView的数量要与上面RelativeLayout的数量对应 -->
+
+                <LinearLayout
+                    android:id="@+id/llayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/vPager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!-- <com.petsay.component.view.SquareHotRankView -->
+            <!-- android:id="@+id/hotrank" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:background="@color/white" -->
+            <!-- android:visibility="gone" /> -->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#eeeeee"-->
+                <!--android:paddingBottom="15dp"-->
+                <!--android:paddingTop="15dp" >-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/layout_topic"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white" >-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/img_topiclogo"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:src="@drawable/square_topic" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_topic_content"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/img_topiclogo"-->
+                        <!--android:layout_marginTop="18dp"-->
+                        <!--android:ellipsize="end"-->
+                        <!--android:paddingBottom="18dp"-->
+                        <!--android:paddingLeft="50dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="#787878"-->
+                        <!--android:textSize="18sp" />-->
+                <!--</RelativeLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/layout_rank"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/layout_topic"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal" >-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/layout_petalk"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:paddingBottom="10dp"-->
+                        <!--android:paddingTop="18dp" >-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/img_petalk"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:adjustViewBounds="true"-->
+                            <!--android:src="@drawable/square_petalk" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="说说排行"-->
+                            <!--android:textColor="#787878"-->
+                            <!--android:textSize="18sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="5dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/transparent" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/layout_pet"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:paddingBottom="10dp"-->
+                        <!--android:paddingTop="18dp" >-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/img_pet"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:adjustViewBounds="true"-->
+                            <!--android:src="@drawable/square_pet" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="萌宠排行"-->
+                            <!--android:textColor="#787878"-->
+                            <!--android:textSize="18sp" />-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/layout_award"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/layout_rank"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingBottom="20dp"-->
+                    <!--android:paddingTop="20dp" >-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="27dp"-->
+                        <!--android:layout_marginRight="27dp"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:src="@drawable/square_award" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/img_rank" -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:layout_marginTop="5dp" -->
+            <!-- android:adjustViewBounds="true" -->
+            <!-- android:src="@drawable/square_top" /> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#EEEEEE"
+                android:orientation="vertical"
+                 >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="热门活动"
+                        android:textColor="#eb3335"
+                        android:textSize="24sp" />
+
+                    <com.petsay.component.view.ActiveView
+                        android:id="@+id/activeView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" android:padding="5dp"
+                    android:orientation="vertical" android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="热门话题"
+                        android:textColor="#eb3335"
+                        android:textSize="24sp" />
+
+                    <com.petsay.component.view.ScrollGridView
+                        android:id="@+id/grid_link"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fadingEdge="none"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="@color/transparent"
+                        android:numColumns="auto_fit"
+                        android:scrollingCache="false"
+                        android:verticalSpacing="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.petsay.component.view.PagerScrollView>
+
+</LinearLayout>

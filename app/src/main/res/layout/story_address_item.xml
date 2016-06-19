@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.petsay.component.view.SquareRelativeLayout
+    android:id="@+id/layout_address"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/story_address_bg">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FF9B5D"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#FF9B5D"/>
+
+</com.petsay.component.view.SquareRelativeLayout>

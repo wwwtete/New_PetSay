@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="10dp" android:id="@+id/rlayout_fans">
+
+    <com.petsay.component.view.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_header"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/placeholderhead"
+        app:border_color="#ffffff"
+        app:border_width="2dp" />
+      <ImageView
+                android:id="@+id/img_star"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/img_header"
+                android:layout_alignRight="@+id/img_header"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/star"
+                android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:src="@drawable/liebiaoyouce" />
+    
+       <TextView
+        android:id="@+id/btn_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/jiaguanzhu"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="+关注"
+        android:textColor="#ffffff"
+        android:textSize="12sp" android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/btn_attention"
+        android:layout_toRightOf="@id/img_header"
+        android:singleLine="true"
+        />
+
+</RelativeLayout>

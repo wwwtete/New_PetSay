@@ -1,0 +1,162 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="hometitle">
+        <item name="android:textColor">@color/home_title_text</item>
+        <item name="android:textSize">@dimen/home_0_tab_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="menu_text_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="tag_text_view">
+        <item name="android:textColor">#aaaaaa</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableLeft">@drawable/label</item>
+    </style>
+
+    <style name="Theme.AppStartLoad" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/loading_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ver_update_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+ <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+ <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+ <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+ <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+ <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+ <!-- 模糊 -->
+    </style>
+
+    <style name="dialogWindowAnim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+    </style>
+
+    <style name="popupWindowAnim_bottom" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="chat_popupwindow_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="list_divider">
+        <item name="android:divider">#9CB2BE</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+
+    <style name="list_divider_nocolor">
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+
+    <style name="list_trasparent">
+        <item name="android:divider">@color/transparent</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+
+    <style name="list_trasparent2">
+        <item name="android:divider">@color/activity_bg</item>
+        <item name="android:dividerHeight">8dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+    
+    <style name="tag_gridview">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:horizontalSpacing">1dp</item>
+        <item name="android:verticalSpacing">1dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:numColumns">2</item>
+    </style>
+
+    <style name="growup_text">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:shadowRadius">5.0</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="order_detail_title_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/order_detail_text_color</item>
+    </style>
+
+    <style name="order_detail_label_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#8C8C8C</item>
+    </style>
+
+
+</resources>

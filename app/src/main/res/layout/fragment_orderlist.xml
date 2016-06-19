@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <ListView
+            android:id="@+id/lv_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/activity_bg"
+            android:dividerHeight="10dp"
+            android:listSelector="@null"
+            android:scrollingCache="false" android:fadingEdge="none" />
+
+    </com.petsay.component.view.PullToRefreshView>
+
+    <com.petsay.component.view.NullTipView
+        android:id="@+id/nulltip"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bg_src="@drawable/order_null_bg"
+        app:btn_src="@drawable/order_null_btn"
+        android:layout_gravity="center"/>
+
+
+</FrameLayout>

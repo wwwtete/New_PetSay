@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <ListView
+            android:id="@+id/lv_hot"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/petalk_list_divider_color"
+            android:dividerHeight="@dimen/petalk_list_divider_height"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:overScrollMode="never"
+            android:scrollingCache="false" />
+    </com.petsay.component.view.PullToRefreshView>
+
+</RelativeLayout>

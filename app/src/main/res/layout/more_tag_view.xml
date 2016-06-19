@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@drawable/label_list_bg">
+    <include android:id="@+id/ic_title"
+             layout="@layout/petsay_titlebar" />
+    <GridView
+        android:id="@+id/gv_tags"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/tag_gridview"/>
+
+</merge>

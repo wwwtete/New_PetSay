@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TagImageView">
+        <attr name="src" format="reference" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ColorPicker">
+        <attr name="color_wheel_radius" format="dimension" />
+        <attr name="color_wheel_thickness" format="dimension" />
+        <attr name="color_center_radius" format="dimension" />
+        <attr name="color_center_halo_radius" format="dimension" />
+        <attr name="color_pointer_radius" format="dimension" />
+        <attr name="color_pointer_halo_radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ColorBars">
+        <attr name="bar_thickness" format="dimension" />
+        <attr name="bar_length" format="dimension" />
+        <attr name="bar_pointer_radius" format="dimension" />
+        <attr name="bar_pointer_halo_radius" format="dimension" />
+        <attr name="bar_orientation_horizontal" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="chataudioview">
+        <attr name="iscommsg" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FunctionBarView">
+        <attr name="isfromlist" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="markimageView">
+        <attr name="content_src" format="reference" />
+        <attr name="mark_position" format="dimension">
+            <enum name="top_left" value="0" />
+            <enum name="top_right" value="1" />
+            <enum name="bottom_right" value="2" />
+            <enum name="bottom_left" value="3" />
+        </attr>
+        <attr name="mark_src" format="reference" />
+        <attr name="mark_visibility" format="dimension">
+            <enum name="visible" value="1" />
+            <enum name="gone" value="0" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="inputview">
+        <attr name="info_type" format="string" />
+        <attr name="info_unit" format="string" />
+    </declare-styleable>
+    
+     <declare-styleable name="imagetext">
+        <attr name="itv_text" format="string" />
+        <attr name="itv_background" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="nulltipview">
+        <attr name="bg_src" format="reference"></attr>
+        <attr name="btn_src" format="reference"></attr>
+    </declare-styleable>
+
+</resources>

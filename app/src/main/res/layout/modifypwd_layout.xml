@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/bg_translucence"
+        android:background="@drawable/search_tag_item_bg"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/ev_old_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:hint="@string/modifypwd_old"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/ev_new_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:hint="@string/modifypwd_new"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/ev_verify_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:hint="@string/modifypwd_verify"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          	android:padding="10dp" android:background="@drawable/btnlogin_selector"
+            android:layout_marginTop="20dp"
+            android:text="@string/modifypwd_ok"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

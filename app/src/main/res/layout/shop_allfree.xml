@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+   
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_titlebar"
+        android:background="#CECECE" >
+
+        <ListView
+            android:id="@+id/lv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="#eeeeee"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:scrollingCache="false" />
+    </com.petsay.component.view.PullToRefreshView>
+
+</RelativeLayout>

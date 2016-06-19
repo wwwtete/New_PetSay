@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp" >
+
+    <com.petsay.component.view.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_unactive"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/placeholderhead"
+        app:border_color="#ffffff"
+        app:border_width="0dp" />
+
+    <TextView
+        android:id="@+id/tv_comment_petnick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textColor="#85d1fb"/>
+
+    <TextView
+        android:id="@+id/tv_commnet_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+</LinearLayout>

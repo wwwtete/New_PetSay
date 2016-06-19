@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/img_headerbg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/usercenter_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/ic_titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/petsay_titlebar" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.petsay.component.view.PullToRefreshView
+                android:id="@+id/pulltorefreshview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="#EEEEEE"
+                    android:dividerHeight="1dp"
+                     android:drawSelectorOnTop="false"
+                    android:fadingEdge="none" 
+                    android:headerDividersEnabled="false"
+                    android:listSelector="@color/transparent"
+                    android:scrollingCache="false" >
+                </ListView>
+            </com.petsay.component.view.PullToRefreshView>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

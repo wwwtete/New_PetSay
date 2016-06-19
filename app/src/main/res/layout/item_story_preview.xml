@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical">
+
+
+    <com.petsay.component.view.SquareRelativeLayout
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/story_address_bg">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#FF9B5D"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="right"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#FF9B5D"/>
+
+    </com.petsay.component.view.SquareRelativeLayout>
+
+    <include layout="@layout/story_text_item"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="@null"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pet1"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/iv_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent2"
+            android:layout_alignBottom="@id/iv_content"
+            android:layout_alignRight="@id/iv_content"
+            android:layout_alignLeft="@id/iv_content"
+            android:visibility="visible"
+            android:padding="2dp"
+            android:ellipsize="end"
+            android:textColor="@color/white"/>
+
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColor="@color/story_title_color"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/story_title_color"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ECECEC"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="#00000000"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="#646464"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_comment_root"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1" >
+
+        <ImageView
+            android:id="@+id/img_pet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:adjustViewBounds="true"
+            android:src="@drawable/placeholderhead" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#646464"
+                android:textSize="@dimen/shop_list_description" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/coin_icon"
+                android:textColor="#646464"
+                android:textSize="@dimen/shop_list_price" />
+
+            <RelativeLayout android:id="@+id/layout_strike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_price"
+                android:layout_alignLeft="@id/tv_price"
+                android:layout_alignRight="@id/tv_price"
+                android:layout_alignTop="@id/tv_price" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#646464" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_price"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shop_buy"
+                android:text="我要兑换"
+                android:textColor="@color/white"
+                android:textSize="@dimen/shop_list_buy" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_price"
+                android:layout_alignTop="@id/tv_price"
+                android:layout_toRightOf="@+id/tv_price" >
+
+                <TextView
+                    android:id="@+id/tv_posttype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shop_remark"
+                    android:gravity="center"
+                    android:text="免运费"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/shop_list_posttype" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="#ffba00"
+        android:textSize="16sp" />
+
+</LinearLayout>

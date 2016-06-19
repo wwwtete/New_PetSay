@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/layout_root"
+              android:background="@color/activity_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <FrameLayout
+        android:id="@+id/fl_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/add_address_icon"
+            android:textColor="#84CBFB"
+            android:gravity="center"
+            android:text="添加收货地址"/>
+    </FrameLayout>
+
+    <!--<listview-->
+        <!--android:id="@+id/lv_address"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:dividerheight="5dp"-->
+        <!--android:divider="@color/activity_bg"-->
+        <!--android:listselector="@color/transparent"-->
+        <!--android:layout_below="@id/ic_titlebar"-->
+        <!--android:layout_above="@id/fl_add"/>-->
+
+    <com.petsay.component.view.swipelistview.SwipeListView
+        android:id="@+id/lv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="5dp"
+        android:divider="@color/activity_bg"
+        android:listSelector="@color/transparent"
+        android:layout_below="@id/ic_titlebar"
+        android:layout_above="@id/fl_add"
+        app:swipeActionLeft="reveal"
+        app:swipeBackView="@+id/swipe_backview"
+        app:swipeCloseAllItemsWhenMoveList="true"
+        app:swipeFrontView="@+id/swipe_frontview"
+        app:swipeMode="left"
+        app:swipeOpenOnLongPress="false" />
+
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <com.petsay.component.view.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#E6E6E6"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/img_pet"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_pet"
+                android:layout_alignTop="@id/img_pet"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/img_pet"
+                android:background="@color/transparent"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:hint="@string/release_0_edit_hint"
+                android:maxLength="50"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/ed_content"
+                android:layout_below="@id/ed_content" >
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="50"
+                    android:textColor="@color/release_0_count_color" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_count"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/img_emoji"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/emoticon" />
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/img_emoji"
+                        android:background="@drawable/dingweibeijing"
+                        android:drawableLeft="@drawable/dingwei_xiao"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="北京市海淀区信息路"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A9A9A9" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#E6E6E6"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/layout_tagview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_taglbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="选择标签："
+                    android:textColor="@color/black" />
+
+                <com.petsay.component.view.TagView
+                    android:id="@+id/tagview_selected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- <com.petsay.component.view.TagView -->
+            <!-- android:id="@+id/tagview_all" -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:orientation="vertical" /> -->
+
+            <com.petsay.component.view.ReleaseTagPagerView
+                android:id="@+id/tag_page_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.petsay.component.view.ReleaseTagPagerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/release_0_share"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_sina"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_sina"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/sinamicro_blog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/release_0_share_sina" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_pengyouquan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_pengyouquan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/pengyouquan_uncli" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/release_0_share_weixin" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <!-- <LinearLayout -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:orientation="horizontal" > -->
+
+
+                <!-- <ImageView android:id="@+id/img_tencent" -->
+                <!-- android:layout_width="30dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:src="@drawable/tengxunweibo_weilianjie" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="10dp" -->
+                <!-- android:text="@string/release_0_share_tencent" /> -->
+                <!-- </LinearLayout> -->
+
+
+                <!-- <LinearLayout -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="center_vertical" -->
+                <!-- android:orientation="horizontal" > -->
+
+
+                <!-- <ImageView android:id="@+id/img_qzone" -->
+                <!-- android:layout_width="30dp" -->
+                <!-- android:layout_height="30dp" -->
+                <!-- android:src="@drawable/qzone_uncli" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_marginLeft="10dp" -->
+                <!-- android:text="@string/release_0_share_qzone" /> -->
+                <!-- </LinearLayout> -->
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

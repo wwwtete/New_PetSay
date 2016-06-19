@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/layout_padding" >
+
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_order_oneprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 68" />
+
+        <TextView
+            android:id="@+id/tv_order_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x1" />
+
+        <TextView
+            android:id="@+id/tv_order_postage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运费：10元" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tv_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/layout_price"
+        android:layout_toRightOf="@id/img_thumb"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="说的会发生看见的话费卡介绍科技大会法律就是打飞机哈看见的舒服哈洛杉矶的发挥会计师电话放辣椒的时间里法计算的立刻睡觉地方了吗了肯定就是" />
+
+</RelativeLayout>

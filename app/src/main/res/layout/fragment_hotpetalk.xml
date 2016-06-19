@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/refreshview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <GridView
+        android:id="@+id/gv_hotpetalk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent"
+        android:horizontalSpacing="@dimen/hot_petalk_spacing"
+        android:verticalSpacing="@dimen/hot_petalk_spacing"
+        android:numColumns="2"/>
+    </com.petsay.component.view.PullToRefreshView>
+</FrameLayout>

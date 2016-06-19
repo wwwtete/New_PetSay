@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 更换更换皮肤的Key -->
+<resources>
+    
+    <!-- 皮肤版本 -->
+    <string name="skin_version">skin_version</string>
+    
+    <!-- 皮肤名称 -->
+    <string  name="skin_blue">skin_0</string>
+    <string  name="skin_pink">skin_1</string>
+    <string name="skin_violet">skin_3</string>
+    
+    <!-- 主题背景 -->
+    <string name="theme_bg">theme_bg.png</string>
+    <string name="checkversion_txt_bg">lastversion.png</string>
+    
+    <!-- 右侧菜单 -->
+    <string name="right_menu_home">right_menu_home.png</string>
+    <string name="right_menu_msg">right_menu_msg.png</string>
+    <string name="right_menu_setting">right_menu_setting.png</string>
+    <string name="right_menu_text_color">right_menu_text_color</string>
+    <string name="right_review_newsay_icon">review_hotsay_icon.png</string>
+    <string name="right_menu_giftbag_icon">right_menu_giftbag.png</string>
+     <string name="right_menu_shop">right_menu_shop.png</string>
+    
+    <!-- 按钮选择器 -->
+    <string name="login_btn_bg_normal">btn_bg_normal.9.png</string>
+    <string name="login_btn_bg_pull">btn_bg_pull.9.png</string>
+    
+    <!-- 底部拍照背景色 -->
+    <string name="camera_bottom_btn_normal">camera_bottom_btn_normal.png</string>
+    <string name="camera_bottom_btn_pull">camera_bottom_btn_pull.png</string>
+    <string name="camera_bottom_bg_color">camera_bottom_bg_color</string>
+    
+    <!-- 搜索用户 -->
+    <string name="search_btn_normal">search_btn_normal.png</string>
+    
+    <!-- 用户中心 -->
+    <string name="usercenter_tab_bg">usercenter_tab_bg.9.png</string>
+    <string name="usercenter_add_bg">usercenter_add_bg.png</string>
+    <string name="usercenter_header_bg">usercenter_header_bg.9.png</string>
+    <string name="other_usercenter_header_bg">usercenter_header_bg.9.png</string>
+    <string name="other_usercenter_tab_bg">usercenter_tab_bg.9.png</string>
+    <string name="usercenter_selected_text_color">usercenter_selected_text_color</string>
+    
+    <!-- 详情界面 -->
+    <string name="functionbar_bg_color">functionbar_bg_color</string>
+    <string name="detail_focus_text_color">detail_focus_text_color</string>
+    <string name="detail_focus_bg">detail_focus_bg.9.png</string>
+    
+    
+    <!-- 嘴型 -->
+    <string name="circle_selected_bg">circle_selected_bg.png</string>
+    
+    <!-- 踩的皮肤 -->
+    <string name="step_icon">step_icon.png</string>
+    <string name="step_anim">step_anim.png</string>
+    
+    <!-- tag标签 -->
+    <string name="selected_tag_text_color">selected_tag_text_color</string>
+    
+    <string name="page_indicator_focused">page_indicator_focused.png</string>
+    <string name="page_indicator_unfocused">page_indicator_unfocused.png</string>
+    
+    <!-- 消息 -->
+    <string name="msg_assistant">msg_assistant.png</string>
+    <string name="msg_comment">msg_comment.png</string>
+    <string name="msg_focus">msg_focus.png</string>
+    <string name="msg_step">msg_step.png</string>
+    <string name="msg_talk">msg_talk.png</string>
+    <!-- 推荐关注宠物界面 -->
+    <string name="select_pet">select_pet.png</string>
+    
+    
+    
+    
+    
+    
+    
+    <!-- ===========================新版============================================== -->
+    <!-- 首页消息按钮 -->
+    <string name="bottom_msg">bottom_msg.png</string>
+</resources>

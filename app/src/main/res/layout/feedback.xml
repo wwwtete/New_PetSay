@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/check_version_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/feedback_edit_bg"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="@string/feedback_content"
+                android:padding="5dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/feedback_line" />
+
+            <EditText
+                android:id="@+id/ed_info"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:hint="@string/feedback_info"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

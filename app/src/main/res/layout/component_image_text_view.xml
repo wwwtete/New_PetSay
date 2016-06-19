@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_talkparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlayout_info_talk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_favour_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_favour_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/step_ico" />
+
+            <TextView
+                android:id="@+id/tv_favourcount_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300" />
+        </LinearLayout>
+
+        <com.petsay.component.view.ExCircleView
+            android:id="@+id/headview_talk"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/layout_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/headview_talk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/layout_favour_talk"
+            android:layout_toRightOf="@id/headview_talk"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_sex_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_name_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- <RelativeLayout -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+
+
+        <!-- android:layout_marginBottom="5dp" -->
+        <!-- android:layout_marginLeft="10dp" -->
+        <!-- android:layout_marginRight="5dp" -->
+
+
+        <!-- android:paddingTop="5dp" > -->
+
+        <TextView
+            android:id="@+id/tv_date_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/headview_talk"
+            android:ellipsize="end"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/hot_details_time"
+            android:textSize="12sp" />
+        <!-- </RelativeLayout> -->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_talkcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/list_content"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

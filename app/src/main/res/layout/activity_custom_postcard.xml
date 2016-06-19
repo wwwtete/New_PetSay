@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <com.petsay.component.view.postcard.AddOrderView
+        android:id="@+id/view_addorder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <com.petsay.component.view.PagerScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_addorder"
+        android:layout_below="@id/ic_titlebar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activity_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlayout_card"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/postcard_border"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+
+            <com.petsay.component.view.GalleryView
+                android:id="@+id/galleryview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/img_addcustom"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/custom_btn" />
+
+            <LinearLayout
+                android:id="@+id/layout_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_title1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="宠物说-私宠定制说说明信片，可以开口说的明信片。"
+                        android:textColor="#646464" />
+
+                    <TextView
+                        android:id="@+id/tv_oneprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title1"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#646464" />
+
+                    <TextView
+                        android:id="@+id/tv_postage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_oneprice"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#646464" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.petsay.component.view.postcard.ContactUsView
+                        android:id="@+id/view_contactus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:id="@+id/view_line1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/activity_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_title2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商品详情"
+                        android:textColor="#646464" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.petsay.component.view.PagerScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <com.petsay.component.view.postcard.AddOrderView
+        android:id="@+id/view_addorder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/view_addorder"
+        android:layout_below="@id/ic_titlebar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop" >
+
+                <ImageView
+                    android:id="@+id/img_add_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/add_address" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/layout_padding"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/img_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/order_address_icon" />
+
+                    <ImageView
+                        android:id="@+id/liebiaoyouce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/liebiaoyouce" />
+
+                    <TextView
+                        android:id="@+id/tv_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_address"
+                        android:singleLine="true"
+                        android:textColor="#646464" />
+
+                    <TextView
+                        android:id="@+id/tv_receiver_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/liebiaoyouce"
+                        android:drawableLeft="@drawable/dianhua"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="#646464" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_receiver"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@+id/liebiaoyouce"
+                        android:layout_toRightOf="@id/img_address"
+                        android:textColor="#646464" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:padding="@dimen/layout_padding" >
+
+                <ImageView
+                    android:id="@+id/img_thumb"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/tv_orderinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/img_thumb"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="#646464" />
+
+                <LinearLayout
+                    android:id="@+id/layout_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_thumb"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/img_thumb"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_order_oneprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464" />
+
+                    <TextView
+                        android:id="@+id/tv_order_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="#646464" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:id="@+id/tv_paytype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式"
+                    android:textColor="#646464" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_paytype"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/img_wx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/xuanzhongweixin" />
+
+                    <ImageView
+                        android:id="@+id/img_alipay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weixuanzhongzhifubao" />
+
+                    <ImageView
+                        android:id="@+id/img_upacp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/weixuanzhongyinlian" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/ed_note"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:hint="买家留言"
+                android:padding="@dimen/layout_padding" />
+
+            <RelativeLayout
+                android:id="@+id/layout_coupon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:id="@+id/tv_coupon_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券："
+                    android:textColor="#646464" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_coupon_title"
+                    android:text="未使用优惠券"
+                    android:textColor="#646464" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/liebiaoyouce" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:id="@+id/tv_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#646464" />
+
+                <TextView
+                    android:id="@+id/tv_postage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#646464" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

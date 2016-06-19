@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/transparency_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_wifiauto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:paddingLeft="@dimen/setting_item_padding" android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="发布保存编辑图片到本地"
+                android:textColor="@color/black"
+                android:textSize="@dimen/setting_item_textsize" />
+
+            <!-- <Switch -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_alignParentRight="true" 	 android:thumb="@drawable/blue_cir" -->
+            <!-- android:layout_centerVertical="true" android:track="@drawable/attentioned"/> -->
+
+            <com.petsay.component.view.switchButton.SwitchButton
+                android:id="@+id/swbtn_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+            <!-- <ToggleButton -->
+            <!-- android:id="@+id/iv_wifiauto" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_alignParentRight="true" -->
+            <!-- android:layout_centerVertical="true" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:paddingLeft="@dimen/setting_item_padding" android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="发布自动保存原图"
+                android:textColor="@color/black"
+                android:textSize="@dimen/setting_item_textsize" />
+
+            <com.petsay.component.view.switchButton.SwitchButton
+                android:id="@+id/swbtn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

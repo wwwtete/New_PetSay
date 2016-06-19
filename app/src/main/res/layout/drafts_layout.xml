@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/petsay_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+    <!--     <com.petsay.component.view.PullToRefreshView
+            android:id="@+id/refreshview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" > -->
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        <!-- </com.petsay.component.view.PullToRefreshView> -->
+
+        <com.petsay.component.view.BottomCameraView
+            android:id="@+id/drafts_camera"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true" >
+        </com.petsay.component.view.BottomCameraView>
+    </RelativeLayout>
+
+</LinearLayout>

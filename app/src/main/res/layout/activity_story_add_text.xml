@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include android:id="@+id/ic_title"
+             layout="@layout/petsay_titlebar" />
+
+    <EditText
+        android:id="@+id/ev_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:hint="请输入故事内容"
+        android:gravity="top"
+        android:maxLength="200"
+        android:background="@color/white"/>
+
+</LinearLayout>

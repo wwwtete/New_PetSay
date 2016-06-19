@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+    <include android:id="@+id/ic_title"
+             layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/ic_title"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C9CACB"
+            android:textSize="16sp"
+            android:text="标题"/>
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <EditText
+                android:id="@+id/ev_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FE9158"
+                android:layout_marginBottom="5dp"
+                android:cursorVisible="false"
+                android:background="@color/transparent"
+                android:textSize="16sp"/>
+
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title"
+        android:background="#646464">
+    <com.petsay.component.draggridview.DragGridView
+        android:id="@+id/dragGridView"
+        android:listSelector="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:verticalSpacing="5dip"
+        android:horizontalSpacing="5dip"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:numColumns="4" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/shadeview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title"
+        android:visibility="gone"
+        android:background="#C8FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/story_add_icon"/>
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/story_preview_icon"/>
+
+    <com.petsay.activity.story.StoryRecorderView
+        android:id="@+id/recorderview"
+        android:visibility="gone"
+        android:layout_below="@id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

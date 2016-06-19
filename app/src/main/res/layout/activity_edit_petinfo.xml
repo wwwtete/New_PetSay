@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:inputview="http://schemas.android.com/apk/res-auto"
+    xmlns:imagetext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#eeeeee"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="取消" />
+
+        <Button android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ff7471"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layout_btn"
+        android:layout_below="@id/ic_titlebar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:id="@+id/tv_baseinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="基本信息" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_baseinfo"
+                    android:layout_alignParentRight="true"
+                    android:text="测量助手 >>" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_bust"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_baseinfo"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="胸围："
+                    inputview:info_unit="cm" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_neckCf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_bust"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="颈围："
+                    inputview:info_unit="cm" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_bodyLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_neckCf"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="背长："
+                    inputview:info_unit="cm" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:id="@+id/tv_baseinfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="继续完善信息" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_variety"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_baseinfo1"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="爱宠品种："
+                    inputview:info_unit="" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_variety"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="爱宠性别："
+                    inputview:info_unit="" />
+
+                <com.petsay.activity.personalcustom.clothing.InputView
+                    android:id="@+id/view_bodyWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_gender"
+                    android:layout_marginLeft="10dp"
+                    inputview:info_type="爱宠体重："
+                    inputview:info_unit="kg" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margintop"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_padding" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择衣服版式" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margintop"
+                    android:orientation="horizontal" >
+
+                    <com.petsay.component.view.postcard.ImageTextView
+                        android:id="@+id/view_clothingShape1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        imagetext:itv_background="@drawable/clothing_type_default"
+                        imagetext:itv_text="宽松" />
+
+                    <com.petsay.component.view.postcard.ImageTextView
+                         android:id="@+id/view_clothingShape2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        imagetext:itv_background="@drawable/clothing_type_default"
+                        imagetext:itv_text="合身" />
+
+                    <com.petsay.component.view.postcard.ImageTextView
+                        android:id="@+id/view_clothingShape3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        imagetext:itv_background="@drawable/clothing_type_default"
+                        imagetext:itv_text="修身" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#88333333"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/layout_wheel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wheelview_bg"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_above="@id/layout_wheel"
+            android:background="@drawable/wheelview_btn_bg"
+            android:text="确定" />
+    </RelativeLayout>
+
+</RelativeLayout>

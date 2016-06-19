@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/tv_petinfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="爱宠信息" />
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_petinfo_title"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="30dp" android:visibility="gone"
+        android:text="编辑>>" />
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_petinfo_title"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱宠品种：" />
+
+            <TextView android:id="@+id/tv_variety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="边境牧羊犬" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胸围：" />
+
+            <TextView android:id="@+id/tv_bust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12cm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="颈围：" />
+
+            <TextView android:id="@+id/tv_neckCf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12cm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="背长：" />
+
+            <TextView  android:id="@+id/tv_bodyLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12cm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱宠体重：" />
+
+            <TextView android:id="@+id/tv_bodyWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14kg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱宠性别：" />
+
+            <TextView android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阳光男孩" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="喜欢版式：" />
+
+            <TextView  android:id="@+id/tv_clothingShape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修身" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="+ 添加爱宠信息" />
+
+</RelativeLayout>

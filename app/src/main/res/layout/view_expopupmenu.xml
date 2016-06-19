@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent2"/>
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circular_btn_shape"
+        android:text="@string/edit_pet_menu_cancel"
+        android:textColor="#407DA8"
+        android:textSize="@dimen/cancelmenu_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_menus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_btn_shape"
+        android:layout_above="@id/btn_cancel"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"/>
+
+
+</RelativeLayout>

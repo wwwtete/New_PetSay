@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="6dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_sendtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/chat_text_date_style" android:textColor="@color/list_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp" >
+
+        <com.petsay.component.view.CircleImageView
+            android:id="@+id/img_header"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:focusable="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/placeholderhead"
+            app:border_color="#ffffff"
+            app:border_width="2dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_conent"
+            android:layout_toLeftOf="@id/img_header"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tv_chatcontent"
+                android:background="@drawable/chatto_bg"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+                <ImageView
+                    android:id="@+id/tv_chat_image"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#ff000000"
+                    android:gravity="left|center"
+                    android:minHeight="50dp"
+                    android:lineSpacingExtra="2dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_chat_text"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="right|center_vertical"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_sound"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<FrameLayout-->
+                    <!--android:id="@+id/fl_voluem"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:background="@drawable/chatto_bg">-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_voluem"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical|right"-->
+                        <!--android:src="@drawable/chatto_voluem_ic_01"/>-->
+                <!--</FrameLayout>-->
+            <com.petsay.chat.media.ChatAudioView
+                android:id="@+id/audioview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:iscommsg="false"/>
+
+            <!--</RelativeLayout>-->
+        </FrameLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_time"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:gravity="center_vertical|right"-->
+            <!--android:layout_toLeftOf="@id/fl_conent"-->
+            <!--android:singleLine="true"-->
+            <!--android:visibility="gone"-->
+            <!--android:lineSpacingExtra="2dp"-->
+            <!--android:minHeight="50dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="15sp" />-->
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/fl_conent"
+            android:visibility="gone"
+            android:src="@drawable/chat_send_error"/>
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_header"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/fl_conent"
+            android:visibility="gone"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="#818181"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

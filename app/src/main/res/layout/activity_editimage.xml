@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6e6e6e">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include android:id="@+id/ic_title"
+                 layout="@layout/petsay_titlebar" />
+        <com.petsay.component.customview.MultiframeSurfaceView
+            android:id="@+id/decorate_view"
+            android:layout_below="@id/ic_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:layout_below="@id/decorate_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <com.petsay.component.view.AdjustBarView
+                    android:id="@+id/adjustview"
+                    android:layout_width="match_parent"
+                    android:background="#5a5a5a"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top"/>
+
+                <com.petsay.component.view.publishtalk.DecorationGroupTitleView
+                    android:id="@+id/dt_groupview"
+                    android:layout_width="match_parent"
+                    android:background="#5a5a5a"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"/>
+
+            <com.petsay.component.view.publishtalk.DecoratioUsuallyListView
+                android:id="@+id/dt_moreview"
+                android:layout_below="@id/adjustview"
+                android:layout_above="@id/dt_groupview"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 输入框 -->
+    <ScrollView
+        android:id="@+id/layout_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="40dip"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip"
+                android:gravity="center"
+                android:src="@drawable/delete"
+                android:text="取消"
+                android:textColor="#646464" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="#646464" />
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tv_ok"
+                android:layout_toRightOf="@id/tv_cancel"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#646464"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.petsay.component.view.publishtalk.DecorationMoreView
+        android:id="@+id/moreview"
+        android:background="@color/edit_bg_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

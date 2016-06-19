@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rlayout_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guanzhu_normal" >
+
+        <LinearLayout
+            android:id="@+id/layout_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/img_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="＋"
+                android:textColor="#ACDDFE"
+                android:textSize="12sp" />
+
+            <TextView android:id="@+id/tv_add_att"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:textColor="#ACDDFE"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_already_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rlayout_attention"
+        android:layout_alignLeft="@id/rlayout_attention"
+        android:layout_alignRight="@id/rlayout_attention"
+        android:layout_alignTop="@id/rlayout_attention"
+        android:layout_centerVertical="true"
+        android:alpha="0"
+        android:gravity="center"
+        android:text="√已关注"
+        android:textColor="#ACDDFE"
+        android:textSize="14sp" />
+
+</RelativeLayout>

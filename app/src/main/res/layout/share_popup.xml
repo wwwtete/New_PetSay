@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent2" >
+
+    <LinearLayout
+        android:id="@+id/share_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/share_popup_bg"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_popup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="分享就可以免费试用咯"
+            android:textColor="@color/white"
+            android:textSize="16sp" android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_wechat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/share_popup_layout_padding" >
+
+                <ImageView
+                    android:layout_width="@dimen/share_popup_img_wh"
+                    android:layout_height="@dimen/share_popup_img_wh"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/wechatfriend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="微信" android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_wechatmoments"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/share_popup_layout_padding" >
+
+                <ImageView
+                    android:layout_width="@dimen/share_popup_img_wh"
+                    android:layout_height="@dimen/share_popup_img_wh"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/friendcircle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="朋友圈" android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_sina"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/share_popup_layout_padding" >
+
+                <ImageView
+                    android:layout_width="@dimen/share_popup_img_wh"
+                    android:layout_height="@dimen/share_popup_img_wh"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sina" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="新浪微博" android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_qq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/share_popup_layout_padding" >
+
+                <ImageView
+                    android:layout_width="@dimen/share_popup_img_wh"
+                    android:layout_height="@dimen/share_popup_img_wh"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="QQ" android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_forward"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/share_popup_layout_padding" >
+
+                <ImageView
+                    android:layout_width="@dimen/share_popup_img_wh"
+                    android:layout_height="@dimen/share_popup_img_wh"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/forward_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="转发" android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/share_cancle"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_tag_intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/layout_tab" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="@dimen/usercenter_layout_tab_height" -->
+    <!-- android:orientation="vertical" -->
+    <!-- android:visibility="gone" > -->
+
+    <LinearLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        
+
+        <com.petsay.component.view.TabTitleLayoutView
+            android:id="@+id/layout_hottest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+        <com.petsay.component.view.TabTitleLayoutView
+            android:id="@+id/layout_latest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+    <!-- </LinearLayout> -->
+
+</LinearLayout>

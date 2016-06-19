@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <include android:id="@+id/ic_title"
+             layout="@layout/petsay_titlebar" />
+
+        <EditText
+            android:id="@+id/ev_address"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:maxLength="20"
+            android:background="@color/white"
+            android:hint="添加故事地点"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:text="添加故事时间"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="#88333333">
+
+        <com.petsay.component.wheelview.DateWheelView
+            android:id="@+id/dateview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wheelview_bg"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_above="@id/dateview"
+            android:background="@drawable/wheelview_btn_bg"
+            android:text="确定" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

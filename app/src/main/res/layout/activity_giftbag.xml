@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    tools:context="com.petsay.activity.user.GiftBagActivity" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_titlebar"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <com.petsay.component.view.HorizontalTitle
+            android:id="@+id/titles"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </HorizontalScrollView>
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scrollview"
+        android:layout_marginTop="5dp" >
+
+        <ListView
+            android:id="@+id/lv_giftbag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:cacheColorHint="@color/transparent"
+            android:overScrollMode="never"
+            android:divider="@color/transparent"
+            android:dividerHeight="5dp"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:scrollingCache="false" >
+        </ListView>
+    </com.petsay.component.view.PullToRefreshView>
+
+</RelativeLayout>

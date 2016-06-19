@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/petsay_titlebar" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:src="#bebebe" />
+
+        <com.petsay.component.view.PullToRefreshView
+            android:id="@+id/pulltorefreshview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+             >
+
+            <ListView
+                android:id="@+id/lv_private_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:listSelector="@color/transparent"
+                android:scrollingCache="false" />
+        </com.petsay.component.view.PullToRefreshView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEFB3"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/petsay_titlebar" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ff7471"
+        android:paddingRight="10dp"
+        android:text="确定" android:visibility="gone"
+        android:textColor="@color/white" />
+
+    <com.petsay.component.view.NullTipView
+        android:id="@+id/nulltip"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:bg_src="@drawable/coupons_null_bg"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/btn_confirm"
+        android:layout_below="@id/ic_title"
+        android:layout_marginTop="5dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollingCache="false" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/img_comment_flag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment_flag" />
+
+    <TextView
+        android:id="@+id/tv_commentcount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_comment_flag1"
+        android:layout_alignTop="@id/img_comment_flag1"
+        android:layout_toRightOf="@id/img_comment_flag1"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/list_content" />
+
+    <LinearLayout
+        android:id="@+id/layout_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_commentcount1"
+        android:layout_below="@id/tv_commentcount1"
+        android:orientation="vertical"
+        android:padding="5dp" >
+    </LinearLayout>
+
+    <!-- <TextView android:id="@+id/tv_commentcount2" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_below="@id/layout_comment" /> -->
+
+    <LinearLayout
+        android:id="@+id/layout_commentcount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layout_comment"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_comment_flag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/comment_flag" />
+
+        <TextView
+            android:id="@+id/tv_commentcount2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/list_content" />
+    </LinearLayout>
+
+</RelativeLayout>

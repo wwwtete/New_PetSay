@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_titlebar"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货姓名："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <EditText
+                android:id="@+id/ev_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="填写您的名字"
+                android:maxLength="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:id="@+id/tv_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号码："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <EditText
+                android:id="@+id/ev_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="填写手机号码"
+                android:inputType="number"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所在区域："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <TextView
+                android:id="@+id/tv_lblcity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:hint="所在城市"
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <ImageView
+                android:id="@+id/iv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/liebiaoyouce" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详细地址："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <EditText
+                android:id="@+id/ev_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="街道 小区 门牌"
+                android:maxLength="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:id="@+id/tv_postalcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮政编码："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <EditText
+                android:id="@+id/ev_postalcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="填写邮政编码"
+                android:inputType="number"
+                android:maxLength="6" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:padding="@dimen/shipping_padding" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="设为默认收货地址："
+                android:textColor="@color/black"
+                android:textSize="@dimen/shipping_size" />
+
+            <CheckBox
+                android:id="@+id/cb_default_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_state_check"
+                android:button="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="保存并使用"
+            android:textColor="#84CBFB"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#88333333"
+        android:visibility="gone" >
+
+        <!-- <LinearLayout -->
+        <!-- android:id="@+id/layout_wheel" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentBottom="true" -->
+        <!-- android:background="@drawable/wheelview_bg" -->
+        <!-- android:orientation="vertical" > -->
+        <!-- </LinearLayout> -->
+
+        <com.petsay.component.wheelview.CityWheelView
+            android:id="@+id/wv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wheel_bg" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_above="@id/wv_city"
+            android:background="@drawable/wheelview_btn_bg"
+            android:text="确定" />
+    </RelativeLayout>
+
+</RelativeLayout>

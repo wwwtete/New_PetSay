@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/petsay_titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/bg_translucence"
+        android:background="@drawable/search_tag_item_bg"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/edtxt_reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/textbg"
+            android:hint="@string/login_name"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/edtxt_reg_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:gravity="center_vertical"
+            android:background="@drawable/textbg"
+            android:hint="@string/reg_pwd"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbg"
+            android:gravity="center_vertical"
+            android:padding="4dp" >
+
+            <com.petsay.component.view.VerifyCodeButton
+                android:id="@+id/btn_sendcode"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/fasongyanzhengmanormal"
+                android:text="@string/reg_send" />
+
+            <EditText
+                android:id="@+id/edtxt_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_sendcode"
+                android:background="@null"
+                android:maxLength="6"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:hint="@string/reg_code"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+        
+        <TextView 
+            android:id="@+id/txt_provision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/login_reg_color"/>
+        
+        <Button 
+            android:id="@+id/btn_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="@string/reg_next" android:background="@drawable/btnlogin_selector"/>
+        
+        
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

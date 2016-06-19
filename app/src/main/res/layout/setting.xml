@@ -1,0 +1,277 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_titlebar"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="60dp" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_aboutpetsay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="关于宠物说"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_draft"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="草稿箱"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_setplay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/setting_item_marginTop"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="播放设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_picsetting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="图片设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_chatsetting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="私信设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_skin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="个性化皮肤"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_feed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="意见反馈"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_clearcache"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="清理缓存"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:id="@+id/iv_tmp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/iv_tmp"
+                        android:text="44.0M"
+                        android:textColor="#898989"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_modify_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/setting_item_marginTop"
+                    android:background="#FFFFFF"
+                    android:padding="@dimen/setting_item_padding" >
+
+                    <TextView
+                        android:id="@+id/tv_modify_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="修改密码"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_item_textsize" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/liebiaoyouce" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/iv_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/setting_item_padding"
+                    android:layout_marginRight="@dimen/setting_item_padding"
+                    android:layout_marginTop="@dimen/setting_item_marginTop"
+                    android:background="@drawable/login_click"
+                    android:text="登录"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/setting_item_textsize" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

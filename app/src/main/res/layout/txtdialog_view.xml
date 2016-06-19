@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_adjust_height"
+        android:background="@color/black"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_adddialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/icon_bubble_b" />
+
+        <ImageView
+            android:id="@+id/tv_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/icon_font_a" />
+
+        <ImageView
+            android:id="@+id/tv_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/icon_wordstyle_a" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_title" >
+
+        <GridView
+            android:id="@+id/grid_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editimgbg"
+            android:numColumns="4" />
+        
+        <GridView
+            android:id="@+id/grid_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editimgbg"
+            android:visibility="gone"
+            android:numColumns="4" />
+
+        <HorizontalScrollView
+            android:id="@+id/hscroll_font"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_bubble_b" />
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/layout_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <com.petsay.component.view.colopicker.ColorPicker
+                android:id="@+id/colorpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/layout_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="粗体"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/img_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:src="@drawable/switch_btn_icon_a" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_bold"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="阴影"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/img_shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:src="@drawable/switch_btn_icon_a" />
+                </LinearLayout>
+                
+                <TextView 
+                    android:id="@+id/tv_reset"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_below="@id/layout_shadow"
+            	    android:gravity="center"
+            	    android:text="重置颜色"
+            	    android:layout_marginLeft="8dp"
+            	    android:textSize="18sp"/>
+                
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/activity_bg"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/activity_bg"/>
+
+    <TextView
+        android:id="@+id/tv_storytitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:textColor="@color/story_title_color"/>
+
+    <TextView
+        android:id="@+id/tv_storytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/story_title_color"/>
+
+
+    <ImageView
+        android:id="@+id/img_pet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="#CCCCCC"
+        android:scaleType="fitCenter" />
+
+
+
+    <com.petsay.component.view.ExProgressBar
+        android:id="@+id/pro_loaderpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <com.petsay.component.view.functionbar.StepAnimView
+        android:id="@+id/stepanim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/step_anim"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/img_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:padding="@dimen/petalk_playbtn_padding"
+        android:src="@drawable/play_icon" />
+
+    <ImageView
+        android:id="@+id/iv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:adjustViewBounds="true"/>
+
+    <ProgressBar
+        android:id="@+id/playprogressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:max="100"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/progress_style"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

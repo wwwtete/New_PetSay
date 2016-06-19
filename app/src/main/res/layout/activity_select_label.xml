@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include android:id="@+id/ic_title"
+             layout="@layout/petsay_titlebar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:background="@drawable/label_list_bg">
+        <LinearLayout
+            android:id="@+id/ll_lables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/label_text_group_color"
+                        android:text="热门标签"/>
+                    <TextView
+                        android:id="@+id/tv_more_hot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/liebiaoyouce"
+                        android:visibility="gone"
+                        android:text="更多"/>
+                    </RelativeLayout>
+                <com.petsay.component.view.NoScrollGridView
+                    android:id="@+id/gv_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/tag_gridview"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_self"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/label_text_group_color"
+                        android:text="个人标签"/>
+                    <TextView
+                        android:id="@+id/tv_more_self"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/liebiaoyouce"
+                        android:visibility="gone"
+                        android:text="更多"/>
+                </RelativeLayout>
+                <com.petsay.component.view.NoScrollGridView
+                    android:id="@+id/gv_self"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/tag_gridview"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/label_text_group_color"
+                        android:text="标签分类"/>
+                    <TextView
+                        android:id="@+id/tv_more_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/liebiaoyouce"
+                        android:visibility="gone"
+                        android:text="更多"/>
+                </RelativeLayout>
+                <com.petsay.component.view.NoScrollGridView
+                    android:id="@+id/gv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/tag_gridview"/>
+            </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.petsay.component.view.publishtalk.MoreTagView
+            android:id="@+id/moretagview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></com.petsay.component.view.publishtalk.MoreTagView>
+
+</RelativeLayout>

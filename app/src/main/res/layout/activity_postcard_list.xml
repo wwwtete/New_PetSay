@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <com.petsay.component.view.postcard.AddOrderView
+        android:id="@+id/view_addorder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <com.petsay.component.view.swipelistview.SwipeListView
+        android:id="@+id/swipelistviwe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_addorder"
+        android:layout_below="@id/ic_titlebar"
+        app:swipeActionLeft="reveal"
+        app:swipeBackView="@+id/swipe_backview"
+        app:swipeCloseAllItemsWhenMoveList="true"
+        app:swipeFrontView="@+id/swipe_frontview"
+        app:swipeMode="left"
+        app:swipeOpenOnLongPress="false" />
+
+</RelativeLayout>

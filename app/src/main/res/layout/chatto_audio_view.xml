@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right"
+              android:gravity="right">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical|right"
+        android:singleLine="true"
+        android:lineSpacingExtra="2dp"
+        android:minHeight="50dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_voluem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chatto_bg">
+        <ImageView
+            android:id="@+id/iv_voluem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:src="@anim/chatto_voluem_anim"/>
+    </FrameLayout>
+
+
+</LinearLayout>

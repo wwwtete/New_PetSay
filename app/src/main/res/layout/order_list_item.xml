@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/swipe_backview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/chat_delte_icon" />
+
+    <RelativeLayout  android:id="@+id/swipe_frontview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/img_thumb" android:textColor="#646464"/>
+
+        <com.petsay.component.view.postcard.OrderEditView
+            android:id="@+id/ordereditview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_thumb"
+            android:layout_toRightOf="@id/img_thumb" />
+    </RelativeLayout>
+
+</RelativeLayout>

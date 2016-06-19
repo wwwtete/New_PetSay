@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.petsay.component.view.SquareRelativeLayout
+    android:id="@+id/layout_text"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/story_text_bg">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:ellipsize="end"
+        android:singleLine="false"
+        android:textSize="14sp"
+        android:layout_centerInParent="true"
+        android:textColor="#7E6D6F"/>
+
+</com.petsay.component.view.SquareRelativeLayout>

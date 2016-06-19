@@ -1,0 +1,129 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- 用户登陆界面半透明背景边距 -->
+    <dimen name="bg_translucence">5dp</dimen>
+
+    <!-- 标题文字大小 -->
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="title_height">50dp</dimen>
+
+    <!-- bottom_layout.xml -->
+    <dimen name="bottom_height">50dp</dimen>
+    
+    <!-- home.xml -->
+    <dimen name="home_0_tab_text">16dp</dimen>
+
+    <!-- hot_list_item.xml -->
+    <dimen name="count_layout_margin">3dp</dimen>
+    <dimen name="count_layout_right">5dp</dimen>
+
+    <dimen name="left_menu_width">230dp</dimen>
+    <dimen name="right_menu_width">180dp</dimen>
+    
+    <!-- 设置界面 -->
+    <dimen name="setting_item_marginTop">20dp</dimen>
+    <dimen name="setting_item_textsize">16sp</dimen>
+    <dimen name="setting_item_padding">10dp</dimen>
+    
+    <!-- 个人中心 listview中的悬浮layout -->
+    <dimen name="usercenter_layout_tab_height">60dp</dimen>
+    <dimen name="usercenter_layout_tab_height1">55dp</dimen>
+    
+    <!-- 编辑宠物资料 -->
+    <dimen name="petinfo">20sp</dimen>
+	
+    <!-- 编辑图片 -->
+    <dimen name="edit_adjust_height">40dp</dimen>
+    
+    <!-- 搜索 -->
+    <dimen name="search_0_tab_text">20sp</dimen>
+    <dimen name="cancelmenu_text_size">18sp</dimen>
+
+    <dimen name="share_popup_img_wh">50dp</dimen> 
+    <dimen name="share_popup_layout_padding">5dp</dimen> 
+    
+    <dimen name="decorate_item_size">80dp</dimen>
+    <!-- 消息 -->
+    <dimen name="msg_type_icon_size">25dp</dimen>
+    
+    
+     <!-- Standart dimens for the color wheel -->
+    <dimen name="color_wheel_radius">124dp</dimen>
+    <dimen name="color_wheel_thickness">8dp</dimen>
+    <dimen name="color_center_halo_radius">60dp</dimen>
+    <dimen name="color_center_radius">54dp</dimen>
+    <dimen name="color_pointer_halo_radius">18dp</dimen>
+    <dimen name="color_pointer_radius">14dp</dimen>
+    
+    <!-- Standart dimens for the bars -->
+    <dimen name="bar_thickness">4dp</dimen>
+    <dimen name="bar_length">240dp</dimen>
+    <dimen name="bar_pointer_radius">6dp</dimen>
+    <dimen name="bar_pointer_halo_radius">14dp</dimen>
+    
+    <!-- shop -->
+    <dimen name="shop_list_description">16sp</dimen>
+    <dimen name="shop_list_price">16sp</dimen>
+    <dimen name="shop_list_posttype">16sp</dimen>
+    <dimen name="shop_list_buy">18sp</dimen>
+    <dimen name="shop_list_count">12sp</dimen>
+
+    <!-- 2.5.0 字体大小-->
+    <!-- 用户名 -->
+     <dimen name="pet_name">30sp</dimen>
+      <!-- 描述 -->
+     <dimen name="description">28sp</dimen>
+     <!-- -品种  等级  关注   标签  评论（包括踩转发等数字）-->
+     <dimen name="other_info">24sp</dimen>
+     <!-- -浏览次数 位置信息-->
+      <dimen name="read_times">20sp</dimen>
+
+    <!--饰品-->
+    <dimen name="decoration_usully_item_size">50dp</dimen>
+    <dimen name="decoration_more_verticalSpacing">10dp</dimen>
+    <dimen name="petalk_playbtn_padding">10dp</dimen>
+   
+    
+    <dimen name="petalk_list_divider_height">4dp</dimen>
+    
+    
+    
+    <dimen name="hot_petalk_spacing">4dp</dimen>
+    
+    
+    <dimen name="header_height">300dp</dimen>
+    <dimen name="shipping_padding">10dp</dimen>
+    <dimen name="shipping_size">16sp</dimen>
+<!--     <dimen name="header_logo_size">100dp</dimen> -->
+    
+    <dimen name="slidingmenu_scroll_padding">30dp</dimen>
+    <dimen name="menu_drawable_padding">10dp</dimen>
+    <dimen name="menu_margin_top">50dp</dimen>
+    <dimen name="menu_margin_bottom">20dp</dimen>
+
+    <!--成长笔记-->
+    <dimen name="diary_bottom_height">40dp</dimen>
+    <dimen name="diary_bottom_width">80dp</dimen>
+    <dimen name="diary_title_height">40dp</dimen>
+    
+    
+    <!-- 私宠定制 -->
+    <dimen name="layout_margintop">10dp</dimen>
+    <dimen name="layout_padding">10dp</dimen>
+    <dimen name="order_pading">10dp</dimen>
+
+    <!--旋转飘浮按钮-->
+    <dimen name="action_button_size">72dp</dimen>
+    <dimen name="action_button_content_margin">16dp</dimen>
+    <dimen name="action_button_margin">12dp</dimen>
+    <dimen name="action_menu_radius">96dp</dimen>
+
+    <dimen name="sub_action_button_size">36dp</dimen>
+    <dimen name="sub_action_button_content_margin">6dp</dimen>
+
+</resources>

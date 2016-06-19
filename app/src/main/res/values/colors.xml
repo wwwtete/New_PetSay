@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="hot_comment_count">#ffffff</color>
+    <color name="hot_details_bottom">#C1C1C1</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#60000000</color>
+    <color name="title_bar_bg">#85CBFC</color>
+    <color name="usercenter_tab_selected">#429dfc</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_white">#40FFFFFF</color>
+    <color name="transparent_white_2">#B3ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="split_line">#E7E7E7</color>
+    <color name="pet_info_text_color">#ADADAD</color>
+    <color name="gray_color">#60EEEEEE</color>
+    <color name="login_reg_color">#4B4B4B</color>
+    <color name="dratf_list_item">#7E7E7E</color>
+    <color name="hot_details_bottom_space">#CCCCCC</color>
+    <color name="hot_details_bg">#E6E6E6</color>
+    <color name="hot_details_time">#818181</color>
+    <color name="hot_address_bg">#B8B8B8</color>
+    <color name="hot_titlebar">#919191</color>
+    <color name="hot_name_color">#636363</color>
+    <!-- home.xml -->
+    <color name="home_title_text">#E6E6E9</color>
+    <color name="home_title_selected">#85CCFC</color>
+    <color name="gray_bg_color">#444444</color>
+
+    <!-- 搜索 -->
+    <color name="search_0_tab_text">#FFFFFF</color>
+    <!-- 发布编辑页面   release.xml -->
+    <color name="release_0_count_color">#d22c2c</color>
+    <color name="release_0_title_btn_color">#ffffff</color>
+    <color name="otheruser_unfocus">#2b64c2</color>
+    <color name="otheruser_focus">#ffffff</color>
+    <!-- 列表Item的背景颜色 -->
+    <color name="img_content_bg_color">#CCCCCC</color>
+    <color name="black_overlay">#66000000</color>
+    <!-- 签到 -->
+    <color name="score_color">#3d62ff</color>
+    <color name="signin_success_date_color">#ffffff</color>
+    <color name="signin_failed_date_color">#959595</color>
+
+    <!--礼包和宠豆字体颜色-->
+    <color name="score_text_color">#6E6D73</color>
+    <!-- shop -->
+    <color name="shop_coin">#f762c0</color>
+
+    <color name="chat_tip_text_color">#828282</color>
+    <color name="chat_black_text_color">#7B7A76</color>
+
+    
+    <!--2.5.0-====================================================================2.5.0-->
+    
+    <!-- 新版2.5.0 -->
+    <color name="list_name">#646464</color>
+    <color name="list_grade">#787878</color>
+    <color name="list_content">#787878</color>
+    <color name="home_focus_list">#787878</color>
+    <color name="serch_select">#3CC6FF</color>
+    <color name="serch_default">#787878</color>
+    <color name="activity_bg">#f0f0f0</color>
+    <color name="select_color">#cfcdfd</color>
+    
+
+
+    <color name="edit_bg_color">#6e6e6e</color>
+    <color name="label_text_group_color">#83898B</color>
+    <color name="petalk_list_divider_color">#f0f0f0</color>
+    
+     <!--2.6.0-====================================================================2.6.0-->
+     <color name="award_task_item_bg">#DFCEFF</color>
+     <color name="award_lottery_item_bg">#FFCCE3</color>
+     <color name="award_rank_item_bg">#B7E8FE</color>
+
+    <color name="order_detail_text_color">#8C8C8C</color>
+    <color name="order_highlight_color">#FF9053</color>
+    
+    
+     <!--3.0-====================================================================3。0-->
+    <color name="goods_item_title_color">#646464</color>
+
+    <color name="story_title_color">#FF9053</color>
+     
+</resources>

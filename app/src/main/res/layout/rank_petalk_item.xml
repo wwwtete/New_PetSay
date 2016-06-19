@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_topview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:background="@color/white">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_ranknum"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="40dp"-->
+            <!--android:textColor="#85CBFC"-->
+            <!--android:text="TOP3"-->
+            <!--android:gravity="center"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_hotnum"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#8E8E8E"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:textSize="18sp"/>-->
+        <!--</RelativeLayout>-->
+
+    <!--说说内容-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+            <include
+                android:id="@+id/layout_content"
+                layout="@layout/petalk_public_content_view" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:layout_below="@id/layout_content"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:id="@+id/ll_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#86D1FB"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:padding="10dp">
+                <TextView
+                android:id="@+id/tv_ranknum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text="TOP3"
+                android:gravity="center"/>
+
+                <TextView
+                android:id="@+id/tv_hotnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <com.petsay.component.view.ExCircleView
+                    android:id="@+id/headview"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"/>
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/male"/>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"/>
+                </LinearLayout>
+        <!--<com.petsay.component.view.functionbar.FunctionBarView-->
+            <!--android:id="@+id/functionbar"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right|center_vertical"-->
+            <!--android:layout_weight="1"/>-->
+        </LinearLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <com.petsay.component.gifview.AudioGifView
+                android:id="@+id/am_gif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    
+</LinearLayout>

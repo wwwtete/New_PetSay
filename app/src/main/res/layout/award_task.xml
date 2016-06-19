@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/ic_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/petsay_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/layout_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp" >
+
+        <com.petsay.component.view.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp" 
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/placeholderhead"
+            app:border_color="#ffffff"
+            app:border_width="0dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_header"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已完成:0个" />
+
+            <TextView
+                android:id="@+id/tv_undone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未完成:0个" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_award_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/award_history" />
+    </RelativeLayout>
+
+    <com.petsay.component.view.PullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layout_history"
+        android:layout_below="@id/ic_titlebar"
+        android:layout_margin="5dp"
+        android:background="#FFFFFF" >
+
+        <ListView
+            android:id="@+id/lv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/white"
+            android:dividerHeight="5dp"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="true"
+            android:listSelector="#00000000"
+            android:scrollingCache="false" />
+    </com.petsay.component.view.PullToRefreshView>
+
+    <com.petsay.component.view.NullTipView
+        android:id="@+id/nulltip"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:bg_src="@drawable/task_null_bg"
+        app:btn_src="@drawable/task_null_btn"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>
